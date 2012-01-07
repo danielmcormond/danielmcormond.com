@@ -1,0 +1,10 @@
+--- 
+layout: post
+title: Spiders
+wordpress_id: 264
+wordpress_url: http://danielmcormond.com/?p=264
+date: 2009-03-02 01:05:18 -05:00
+---
+I hate spiders, but this guy is pretty cool:
+<a href="http://danielmcormond.com/wp-content/uploads/2009/03/7ncz.jpeg"><img src="http://danielmcormond.com/wp-content/uploads/2009/03/7ncz.jpeg" alt="Spider" title="Spider" width="640" height="452" class="alignnone size-full wp-image-265" /></a>
+

@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: 1972 Honda CB500 Four
+wordpress_id: 333
+wordpress_url: http://danielmcormond.com/2009/05/17/1972-honda-cb500-four/
+date: 2009-05-17 23:44:12 -04:00
+---
+I recently picked up a barn find '72 CB500. I'll be documenting my progress here as I attempt a rebuild.
+
+In the meantime, I've been getting a lot of traffic to this post, so for now I will direct you to the <a href="http://www.sohc4.net/index.php?q=node/5">SOHC/4 Owners Club</a>.
+
+<img class="alignnone size-full wp-image-332" title="1972 Honda CB500 Four" src="http://danielmcormond.com/wp-content/uploads/2009/05/cb500_2.jpg" alt="1972 Honda CB500 Four" width="803" height="534" />

@@ -1,0 +1,8 @@
+--- 
+layout: post
+title: SR500 Update
+wordpress_id: 375
+wordpress_url: http://danielmcormond.com/?p=375
+date: 2009-08-01 19:22:47 -04:00
+---
+<img class="alignnone size-full wp-image-374" title="l_1600_1200_DF1CF485-6220-4AF5-A664-0E6CEAC168CB.jpeg" src="http://danielmcormond.com/wp-content/uploads/2009/08/l_1600_1200_DF1CF485-6220-4AF5-A664-0E6CEAC168CB.jpeg" alt="l_1600_1200_DF1CF485-6220-4AF5-A664-0E6CEAC168CB.jpeg" width="640" height="480" />

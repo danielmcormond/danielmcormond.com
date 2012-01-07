@@ -1,0 +1,9 @@
+--- 
+layout: post
+title: Yum
+wordpress_id: 468
+wordpress_url: http://danielmcormond.com/2010/04/21/yum/
+date: 2010-04-21 18:28:35 -04:00
+---
+
+<p><a href="http://danielmcormond.com/wp-content/uploads/2010/04/p_1600_1200_D79CFD6E-7F3D-459B-8C7C-9B4AC08E1C59.jpeg"><img src="http://danielmcormond.com/wp-content/uploads/2010/04/p_1600_1200_D79CFD6E-7F3D-459B-8C7C-9B4AC08E1C59.jpeg" alt="" width="225" height="300" class="alignnone size-full wp-image-364" /></a></p>
