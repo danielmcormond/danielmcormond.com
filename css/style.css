@@ -110,3 +110,15 @@ footer ul li {
 	float: left;
 	margin-left: 10px;
 }
+
+code {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 12px;
+}
+
+p.update {
+	background: #fffccc;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: 10px 10px;
+}
