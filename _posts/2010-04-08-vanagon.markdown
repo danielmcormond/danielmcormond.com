@@ -1,8 +1,0 @@
---- 
-layout: post
-title: Vanagon
-wordpress_id: 457
-wordpress_url: http://danielmcormond.com/?p=457
-date: 2010-04-08 09:00:50 -04:00
----
-<img src="http://danielmcormond.com/wp-content/uploads/2010/04/3582963537_e9033ffcf2.jpg" alt="" title="3582963537_e9033ffcf2" width="500" height="333" class="alignnone size-full wp-image-458" />

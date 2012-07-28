@@ -1,8 +1,0 @@
---- 
-layout: post
-title: Me
-wordpress_id: 378
-wordpress_url: http://danielmcormond.com/?p=378
-date: 2009-08-09 21:04:18 -04:00
----
-<img class="alignnone size-full wp-image-379" title="Young Age" src="http://danielmcormond.com/wp-content/uploads/2009/08/youngster.jpg" alt="Young Age" width="800" height="600" />
