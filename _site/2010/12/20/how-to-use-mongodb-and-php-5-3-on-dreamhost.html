@@ -23,33 +23,50 @@
 				<h1 id="title"><a href="/">Daniel McOrmond</a></h1>
 			</header>
 			<div id="main" role="main">
-				<a href='http://blog.pnapieralski.com/'>Phillip Napieralski</a>
-<p>Here are some more specific details about how to get the <a href='http://www.mongodb.org/'>MongoDB</a> driver working with PHP 5.3 on <a href='http://www.dreamhost.com/r.cgi?467109'>DreamHost</a>.</p>
+				<p><a href='http://blog.pnapieralski.com/'>Phillip Napieralski</a> wrote a helpful post about <a href='http://blog.pnapieralski.com/mongodb/how-to-setup-mongodb-php-extension-on-shared-hosting/'>How to Setup MongoDB PHP Extension on Shared Hosting</a> earlier this year.</p>
+
+<p>Here are some more specific details about how to get the <a href='http://www.mongodb.org/'>MongoDB</a> driver working with PHP 5.3 on <a href='http://www.dreamhost.com/r.cgi?467109'>DeamHost</a>.</p>
 
 <p>First, make sure the PHP mode for your domain is set to <em>PHP 5.3 FastCGI</em> in your DreamHost Web Panel.</p>
 
 <p>SSH to your server and download the latest MongoDB PHP driver:</p>
-<code>wget http://download.github.com/mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz</code>
+
+<p><code>wget http://download.github.com/mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz</code></p>
+
 <p>Extract the source code:</p>
-<code>tar zxvf mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz</code>
+
+<p><code>tar zxvf mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz</code></p>
+
 <p>Change directories:</p>
-<code>cd mongodb-mongo-php-driver-b177907</code>
+
+<p><code>cd mongodb-mongo-php-driver-b177907</code></p>
+
 <p>Run phpize using 5.3:</p>
-<code>phpize-5.3</code>
+
+<p><code>phpize-5.3</code></p>
+
 <p>Configure using PHP 5.3</p>
-<code>./configure --with-php-config=/usr/local/php53/bin/php-config</code>
+
+<p><code>./configure --with-php-config=/usr/local/php53/bin/php-config</code></p>
+
 <p>Compile:</p>
-<code>make</code>
+
+<p><code>make</code></p>
+
 <p>You should now have a compiled <em>mongo.so</em> extension in the <em>modules/</em> folder.</p>
 
-<p>Setup your domain(s) to use a custom php.ini file <a href='http://wiki.dreamhost.com/PHP.ini'>following DreamHost's instructions here</a>.</p>
+<p>Setup your domain(s) to use a custom php.ini file <a href='http://wiki.dreamhost.com/PHP.ini'>following DreamHost&#8217;s instructions here</a>.</p>
 
 <p>When you&#8217;re creating your script wrapper, make sure you use the PHP 5.3 executable. My php-wrapper.fcgi looks like this:</p>
-<code>#!/bin/sh
-exec /dh/cgi-system/php53.cgi $*</code>
+
+<p><code>#!/bin/sh
+exec /dh/cgi-system/php53.cgi $*</code></p>
+
 <p>Finally, add the following lines to your custom php.ini</p>
-<code>extension_dir = "/full/path/to/your/mongodb-mongo-php-driver-b177907/modules"
-extension = mongo.so</code>
+
+<p><code>extension_dir = &quot;/full/path/to/your/mongodb-mongo-php-driver-b177907/modules&quot;
+extension = mongo.so</code></p>
+
 <p>Obviously, replace the path above to match the full path to your <em>modules/</em> directory. You should now see the <em>mongo</em> extension listed when you run a <em>phpinfo()</em>.</p>
 
 <p>Let me know how this works for you in the comments below!</p>

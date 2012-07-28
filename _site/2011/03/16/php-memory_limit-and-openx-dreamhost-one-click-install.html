@@ -23,14 +23,15 @@
 				<h1 id="title"><a href="/">Daniel McOrmond</a></h1>
 			</header>
 			<div id="main" role="main">
-				<a href='http://www.dreamhost.com/r.cgi?467109'>DreamHost</a>
+				<p><a href='http://www.dreamhost.com/r.cgi?467109'>DreamHost</a> offers <a href='http://www.openx.org/'>OpenX</a> as a one-click install. Unfortunately, it wasn&#8217;t entirely that easy for me.</p>
+
 <p>The OpenX installer choked because the memory limit for PHP wasn&#8217;t high enough for it&#8217;s liking. The fix for this is pretty simple:</p>
 
-<p>Make sure your domain is running PHP 5.3. Create the directories <strong>~/.php/5.3/</strong> and a file called <strong>~/.php/5.3/phprc</strong></p>
+<p>Make sure your domain is running PHP 5.3. Create the directories <em>~/.php/5.3/</em> and a file called <em>~/.php/5.3/phprc</em></p>
 
-<p>In your phprc, just add <strong>memory_limit = 128M</strong> to appease the cranky OpenX installer.</p>
+<p>In your phprc, just add <em>memory_limit = 128M</em> to appease the cranky OpenX installer.</p>
 
-<p>Run a <code>&lt;em&gt;killall php53.cgi&lt;/em&gt;</code> to make PHP pick up your new settings, and retry the OpenX installer. It should work normally from there.</p>
+<p>Run a <code>*killall php53.cgi*</code> to make PHP pick up your new settings, and retry the OpenX installer. It should work normally from there.</p>
 
 			</div>
 			<footer>
