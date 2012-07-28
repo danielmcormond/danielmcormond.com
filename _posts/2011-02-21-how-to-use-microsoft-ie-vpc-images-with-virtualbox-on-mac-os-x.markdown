@@ -6,6 +6,8 @@ wordpress_url: http://danielmcormond.com/?p=580
 date: 2011-02-21 15:14:29 -05:00
 ---
 
+{.update} Update: these instructions may still work, but I highly recommend using [ievms](http://xdissent.github.com/ievms/) instead.
+
 I recently learned about the [Virtual PC images](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=21eabb90-958f-4b64-b5f1-73d0a413c8ef&amp;displaylang=en) that Microsoft offers for testing web applications. There are several downloads available that come packaged with various versions of Internet Explorer. With a little bit of work, but you can get these running in [VirtualBox](http://www.virtualbox.org/) on Mac OS X.
 
 # Acquire
