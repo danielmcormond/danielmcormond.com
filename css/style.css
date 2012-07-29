@@ -196,3 +196,11 @@ ol#footnotes {
 	margin-top: 20px;
 	list-style-type: decimal;
 }
+
+h1.caption {
+	font-style: italic;
+	margin-bottom: 10px;
+	background: #666;
+	color: #fff;
+	padding: 10px 15px;
+}

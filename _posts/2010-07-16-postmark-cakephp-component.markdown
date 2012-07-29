@@ -14,10 +14,10 @@ There are some existing [PHP libraries for Postmark](http://developer.postmarkap
 
 Add the following keys to your configuration:
 
-```
+{% highlight php startinline %}
 Configure::write('Postmark.uri', 'http://api.postmarkapp.com/email');
 Configure::write('Postmark.key', '810de23c-5ffb-44d9-a424-7a4a5c0fba1a');
-```
+{% endhighlight %}
 
 If you want your connection to Postmark to be encrypted, simply change the uri to use https.
 
@@ -31,41 +31,45 @@ Place the postmark.php file in your app/controllers/components/ folder.
 
 In your controller, make sure the component is available:
 
-`public $components = array('Postmark');`
+{% highlight php startinline %}
+public $components = array('Postmark');
+{% endhighlight %}
 
 Then, simply send messages like this:
 
-```
+{% highlight php startinline %}
 $this->Postmark->delivery = 'postmark';
 $this->Postmark->from = 'sender@domain.com';
 $this->Postmark->to = 'recipient@domain.com';
 $this->Postmark->subject = 'this is the subject';
 $messageBody = 'this is the message body';
 $this->Postmark->send($messageBody);
-```
+{% endhighlight %}
 
 You can also use the following optional attributes:
 
-```
+{% highlight php startinline %}
 $this->Postmark->cc = array('recipient@domain.com');
 $this->Postmark->bcc = array('recipient@domain.com');
 $this->Postmark->replyTo = 'sender@domain.com';
-```
+{% endhighlight %}
 
 The syntax of all parameters is the same as the [default CakePHP email component](http://book.cakephp.org/view/1283/Email).
 
 There is one additional attribute which can be used for setting the [Postmark tag property](http://developer.postmarkapp.com/#message-format):
 
-`$this->Postmark->tag = 'contact';`
+{% highlight php startinline %}
+$this->Postmark->tag = 'contact';
+{% endhighlight %}
 
 #### Debugging
 
 You can see the response from Postmark in the return value when you send a message:
 
-```
+{% highlight php startinline %}
 $result = $this->Postmark->send($messageBody);
 $this->log($result, 'debug');
-```
+{% endhighlight %}
 
 If there are any errors, they'll be included in the response. See the [Postmark API documentation for error code detail](http://developer.postmarkapp.com/#api-error-codes).
 
