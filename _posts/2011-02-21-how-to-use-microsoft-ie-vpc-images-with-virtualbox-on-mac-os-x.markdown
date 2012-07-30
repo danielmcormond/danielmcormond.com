@@ -31,19 +31,19 @@ Install Wine, VirtualBox, and The Unarchiver.
 
 # Extract
 
-Open and run the XPSP3-IE * .EXE file(s) you downloaded from Microsoft using Wine. You can place the extracted files wherever you want.
+Open and run the `XPSP3-IE\*.EXE` file(s) you downloaded from Microsoft using Wine. You can place the extracted files wherever you want.
 
-Extract the PROWin32.exe file you downloaded from Intel using The Unarchiver application.
+Extract the `PROWin32.exe` file you downloaded from Intel using The Unarchiver application.
 
 # Prepare Drivers
 
 Run the Disk Utility application (Applications > Utilities > Disk Utility) and create a new disk image (File > New > Disk Image from Folder).
 
-Select the PROWin32 folder which you created when you extracted the download from Intel.
+Select the `PROWin32` folder which you created when you extracted the download from Intel.
 
-Save the disk image as (Image Format: DVD/CD master) with (Encryption: none). You can save it whatever you want, but you should end up with a PROWin32.cdr file.
+Save the disk image as `Image Format: DVD/CD master` with `Encryption: none`. You can save it wherever you want, but you should end up with a `PROWin32.cdr` file.
 
-Run this command to convert the .cdr file to a Windows compatible .iso with this command:
+Convert the .cdr file to a Windows compatible .iso with this command:
 
 `hdiutil makehybrid -iso -joliet -o /full/path/to/PROWin32.iso /full/path/to/PROWin32.cdr`
 
@@ -51,24 +51,25 @@ Run this command to convert the .cdr file to a Windows compatible .iso with this
 
 Run VirtualBox and create a new virtual machine. Tell it to 'Use existing hard disk' and select the .vhd file you downloaded and extracted from Microsoft. *Don't start up the virtual machine yet*.
 
-> Note: the .vhd files from Microsoft all share the same UUID. So, if you want to use more than one image, you have to change the UUID of the subsequent images. You can do this with the following command:
+> Note: the .vhd files from Microsoft all share the same UUID. So, if you want to use more than one image, you have to change the UUID of the subsequent images.  
+> You can do this with the following command:  
 > `VBoxManage internalcommands sethduuid /full/path/to/IE7Compat.vhd`
 
-Before you start up your virtual machine, edit the settings and change Network > Adapter 1 > Advanced > Network Adapter Type to *Intel PRO/1000 MT Desktop (82540EM)*.
+Before you start up your virtual machine, edit the settings and change (Network > Adapter 1 > Advanced > Network Adapter Type) to *Intel PRO/1000 MT Desktop (82540EM)*.
 
-Make sure that System Preferences > Keyboard > 'Use all F1, F2, etc. keys as standard function keys' is checked, otherwise you might start playing iTunes when you try to boot into safe mode.
+Make sure that (System Preferences > Keyboard > 'Use all F1, F2, etc. keys as standard function keys') is checked, otherwise you might start playing iTunes when you try to boot into safe mode.
 # Start
-Start up the virtual machine, and push F8 repeatedly before the Windows logo appears. When the boot menu appears select to boot into Safe Mode with Command Prompt.
+Start up the virtual machine, and push __F8__ repeatedly before the Windows logo appears. When the boot menu appears select to boot into 'Safe Mode with Command Prompt'.
 
 Cancel all the driver installation dialog boxes that pop up. Yes, it's very annoying.
 
-Make the Intel drivers available by clicking on Devices > CD/DVD Devices > Choose a virtual CD/DVD disk file... and selecting the .iso you created earlier.
+Make the Intel drivers available by clicking on (Devices > CD/DVD Devices > Choose a virtual CD/DVD disk file...) and selecting the .iso you created earlier.
 
-Run the *explorer* command in the command prompt to get access to the Start menu.
+Run the `explorer` command in the command prompt to get access to the Start menu.
 
-Open the Device Manger by clicking Start > right clicking on My Computer > Properties > Hardware tab > Device Manager.
+Open the Device Manger by clicking (Start > right clicking on My Computer > Properties > Hardware tab > Device Manager).
 
-Find the Ethernet Controller device and right click on it and select Update Driver... It should automatically detect the virtual CD you just mounted and install the Intel Drivers from that.
+Find the Ethernet Controller device and right click on it and select (Update Driver...) It should automatically detect the virtual CD you just mounted and install the Intel Drivers from that.
 
 After you've installed the driver you can reboot the virtual machine and allow it to boot normally.
 
@@ -84,6 +85,6 @@ You may still have a few bothersome missing driver pop-ups which can be solved b
 
 # Thanks
 
-Thanks to [Travis](http://twitter.com/travis) for teaching me about the Microsoft VPC images! Also, I couldn't have figured this all out without this [helpful blog post from R0B0TZ](http://r0b0tz.com/2011/02/using-microsofts-ie6-ie7-ie8-vhd-virtual-pc-images-with-virtualbox/),and [this tip from MakeUseOf](http://www.makeuseof.com/tag/how-to-create-windows-compatible-iso-disc-images-in-mac-os-x/).
+Thanks to [Travis](http://twitter.com/travis) for teaching me about the Microsoft VPC images! Also, I couldn't have figured this all out without this [helpful blog post from R0B0TZ](http://r0b0tz.com/2011/02/using-microsofts-ie6-ie7-ie8-vhd-virtual-pc-images-with-virtualbox/), and [this tip from MakeUseOf](http://www.makeuseof.com/tag/how-to-create-windows-compatible-iso-disc-images-in-mac-os-x/).
 
 Let me know if you find this post helpful or if I missed any steps. I'll try my best to answer any questions in the comments.

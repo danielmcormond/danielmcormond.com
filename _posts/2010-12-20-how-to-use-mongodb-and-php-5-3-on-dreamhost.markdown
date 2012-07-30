@@ -5,29 +5,31 @@ wordpress_id: 551
 wordpress_url: http://danielmcormond.com/?p=551
 date: 2010-12-20 16:23:34 -05:00
 ---
-[Phillip Napieralski](http://blog.pnapieralski.com/) wrote a helpful post about [How to Setup MongoDB PHP Extension on Shared Hosting](http://blog.pnapieralski.com/mongodb/how-to-setup-mongodb-php-extension-on-shared-hosting/) earlier this year.
 
-Here are some more specific details about how to get the [MongoDB](http://www.mongodb.org/) driver working with PHP 5.3 on [DeamHost](http://www.dreamhost.com/r.cgi?467109).
+_Updated July 2012. (Originally published in December 2010)._
 
-First, make sure the PHP mode for your domain is set to *PHP 5.3 FastCGI* in your DreamHost Web Panel.
+Follow these instructions to get the [MongoDB PHP driver](https://github.com/mongodb/mongo-php-driver) working with PHP 5.3 on [DeamHost](http://www.dreamhost.com/r.cgi?467109).
+
+> In your [DreamHost Panel](https://panel.dreamhost.com/index.cgi?tree=domain.manage&), make sure your domain is running PHP 5.3.
+> If you're not sure which version to pick, choose `PHP 5.3.x FastCGI`
 
 SSH to your server and download the latest MongoDB PHP driver:
 
-`wget http://download.github.com/mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz`
+`curl -L -o mongo-php-driver.tar.gz https://github.com/mongodb/mongo-php-driver/tarball/master`
 
 Extract the source code:
 
-`tar zxvf mongodb-mongo-php-driver-1.1.0-0-g6eab09c.tar.gz`
+`tar zxvf mongo-php-driver.tar.gz`
 
 Change directories:
 
-`cd mongodb-mongo-php-driver-b177907`
+`cd mongodb-mongo-php-driver-*`
 
 Run phpize using 5.3:
 
 `phpize-5.3`
 
-Configure using PHP 5.3
+Configure using PHP 5.3:
 
 `./configure --with-php-config=/usr/local/php53/bin/php-config`
 
@@ -35,22 +37,28 @@ Compile:
 
 `make`
 
-You should now have a compiled *mongo.so* extension in the *modules/* folder.
+(You should now have a compiled `mongo.so` extension in the `modules/` folder.)
 
-Setup your domain(s) to use a custom php.ini file [following DreamHost's instructions here](http://wiki.dreamhost.com/PHP.ini).
+Create this directory:
 
-When you're creating your script wrapper, make sure you use the PHP 5.3 executable. My php-wrapper.fcgi looks like this:
+`mkdir -p ~/.php/5.3`
 
-`#!/bin/sh
-exec /dh/cgi-system/php53.cgi $*`
+Move your newly compiled module into that directory:
 
-Finally, add the following lines to your custom php.ini
+`mv modules/mongo.so ~/.php/5.3/`
 
-`extension_dir = "/full/path/to/your/mongodb-mongo-php-driver-b177907/modules"
-extension = mongo.so`
+Create a phprc file:
 
-Obviously, replace the path above to match the full path to your *modules/* directory. You should now see the *mongo* extension listed when you run a *phpinfo()*.
+```
+echo "extension = /home/`whoami`/.php/5.3/mongo.so" >> ~/.php/5.3/phprc
+```
+
+Restart your PHP process(es) to pickup the new directives in your phprc:
+
+`killall php53.cgi`
+
+You should now see the *mongo* extension listed when you run a `phpinfo()`.
 
 Let me know how this works for you in the comments below!
 
-Note: These instructions work well for connecting to a hosted instance of MongoDB, [like MongoHQ](http://mongohq.com/). DreamHost terms of service prevent you from running your own MongoDB service on a shared hosting plan. In order to run a legitimate MongoDB server, you'll probably need to upgrade to a DreamHost VPS.
+> Note: These instructions work well for connecting to a hosted instance of MongoDB, [like MongoHQ](http://mongohq.com/). DreamHost terms of service prevent you from running your own MongoDB service on a shared hosting plan. In order to run a legit MongoDB server, you'll probably need to upgrade to a DreamHost VPS.

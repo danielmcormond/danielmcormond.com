@@ -7,11 +7,15 @@
     clear:both;
 }
 
+/* Pictos icons */
 .pictos {
     font-family: 'Pictos Custom';
     -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0.5em;
+}
 h1 { font-size: 200%; }
 h2 { font-size: 180%; }
 h3 { font-size: 160%; }
@@ -19,11 +23,24 @@ h4 { font-size: 140%; }
 h5 { font-size: 120%; }
 h6 { font-size: 100%; }
 
+ul {
+	list-style-type: square;
+}
+li {
+	margin: 5px 0px;
+}
+
 strong {
 	font-weight: bold;
 }
 em {
 	font-style: italic;
+}
+
+blockquote {
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	display: inline-block;
 }
 
 body {
@@ -81,6 +98,7 @@ h1#title a:hover {
 }
 
 ul#links {
+	list-style-type: none;
 	float: right;
 	margin-top: 15px;
 }
@@ -112,6 +130,7 @@ p.update {
 	border-radius: 5px;
 	padding: 10px;
 	display: inline-block;
+	margin-bottom: 0px;
 }
 
 .posts {
@@ -139,13 +158,6 @@ span.notfound {
 #disqus_thread {
 	width: 51em;
 	margin-top: 20px;
-}
-
-ul#tools {
-	list-style-type: square;
-}
-ul#tools li {
-	margin: 5px 0px;
 }
 
 .footnote {
@@ -178,7 +190,7 @@ code {
 	border-radius: 5px;
 	padding: 2px 5px;
 }
-code.php {
+div.highlight pre code {
 	background: inherit;
 	border: none;
 	padding: inherit;
