@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<span class="date">Originally published: {{ page.date | date: "%B %d %Y" }}</span>
+
 <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 
 {{ content }}
