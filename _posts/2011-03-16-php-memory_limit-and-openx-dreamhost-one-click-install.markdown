@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP "memory_limit" and OpenX DreamHost One-Click Install
+title: PHP memory_limit and OpenX DreamHost One-Click Install
 wordpress_id: 605
 wordpress_url: http://danielmcormond.com/?p=605
 date: 2011-03-16 14:31:35 -04:00
