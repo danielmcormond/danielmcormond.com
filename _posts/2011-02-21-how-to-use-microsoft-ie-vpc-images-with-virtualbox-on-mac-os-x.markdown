@@ -6,11 +6,11 @@ wordpress_url: http://danielmcormond.com/?p=580
 date: 2011-02-21 15:14:29 -05:00
 ---
 
-{.update} Update: these instructions may still work, but I highly recommend using [ievms](http://xdissent.github.com/ievms/) instead.
+{.update} Update: these instructions may still work, but I highly recommend using [ievms](http://xdissent.github.com/ievms/) by [xdissent](https://github.com/xdissent) instead.
 
 I recently learned about the [Virtual PC images](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=21eabb90-958f-4b64-b5f1-73d0a413c8ef&amp;displaylang=en) that Microsoft offers for testing web applications. There are several downloads available that come packaged with various versions of Internet Explorer. With a little bit of work, but you can get these running in [VirtualBox](http://www.virtualbox.org/) on Mac OS X.
 
-# Acquire
+### Acquire
 
 Things you'll need:
 * [Wine](http://www.winehq.org/download/)
@@ -25,17 +25,17 @@ I used the Windows XP versions because they're smaller and easier to get running
 * [XPSP3-IE7.EXE](http://www.microsoft.com/downloads/info.aspx?na=46&amp;SrcFamilyId=21EABB90-958F-4B64-B5F1-73D0A413C8EF&amp;SrcDisplayLang=en&amp;u=http%3a%2f%2fdownload.microsoft.com%2fdownload%2fB%2f7%2f2%2fB72085AE-0F04-4C6F-9182-BF1EE90F5273%2fXPSP3-IE7.EXE)
 * [XPSP3-IE8.EXE](http://www.microsoft.com/downloads/info.aspx?na=46&amp;SrcFamilyId=21EABB90-958F-4B64-B5F1-73D0A413C8EF&amp;SrcDisplayLang=en&amp;u=http%3a%2f%2fdownload.microsoft.com%2fdownload%2fB%2f7%2f2%2fB72085AE-0F04-4C6F-9182-BF1EE90F5273%2fXPSP3-IE8.EXE)
 
-# Install
+### Install
 
 Install Wine, VirtualBox, and The Unarchiver.
 
-# Extract
+### Extract
 
 Open and run the `XPSP3-IE\*.EXE` file(s) you downloaded from Microsoft using Wine. You can place the extracted files wherever you want.
 
 Extract the `PROWin32.exe` file you downloaded from Intel using The Unarchiver application.
 
-# Prepare Drivers
+### Prepare Drivers
 
 Run the Disk Utility application (Applications > Utilities > Disk Utility) and create a new disk image (File > New > Disk Image from Folder).
 
@@ -47,7 +47,7 @@ Convert the .cdr file to a Windows compatible .iso with this command:
 
 `hdiutil makehybrid -iso -joliet -o /full/path/to/PROWin32.iso /full/path/to/PROWin32.cdr`
 
-# Create
+### Create
 
 Run VirtualBox and create a new virtual machine. Tell it to 'Use existing hard disk' and select the .vhd file you downloaded and extracted from Microsoft. *Don't start up the virtual machine yet*.
 
@@ -58,7 +58,7 @@ Run VirtualBox and create a new virtual machine. Tell it to 'Use existing hard d
 Before you start up your virtual machine, edit the settings and change (Network > Adapter 1 > Advanced > Network Adapter Type) to *Intel PRO/1000 MT Desktop (82540EM)*.
 
 Make sure that (System Preferences > Keyboard > 'Use all F1, F2, etc. keys as standard function keys') is checked, otherwise you might start playing iTunes when you try to boot into safe mode.
-# Start
+### Start
 Start up the virtual machine, and push __F8__ repeatedly before the Windows logo appears. When the boot menu appears select to boot into 'Safe Mode with Command Prompt'.
 
 Cancel all the driver installation dialog boxes that pop up. Yes, it's very annoying.
@@ -73,17 +73,17 @@ Find the Ethernet Controller device and right click on it and select (Update Dri
 
 After you've installed the driver you can reboot the virtual machine and allow it to boot normally.
 
-# Activate
+### Activate
 
 Because we've changed so much of the virtual underlying hardware, Windows wants to reactivate. Now that you've got network connectivity, just click Yes and tell it to activate Windows over the internet.
 
-# Guest Additions
+### Guest Additions
 
 At this point you can install the VirtualBox Guest Additions, which will help correct some things like the display driver.
 
 You may still have a few bothersome missing driver pop-ups which can be solved by disabling hardware in VirtualBox settings, removing devices from Device Manger, or finding the missing drivers as necessary.
 
-# Thanks
+### Thanks
 
 Thanks to [Travis](http://twitter.com/travis) for teaching me about the Microsoft VPC images! Also, I couldn't have figured this all out without this [helpful blog post from R0B0TZ](http://r0b0tz.com/2011/02/using-microsofts-ie6-ie7-ie8-vhd-virtual-pc-images-with-virtualbox/), and [this tip from MakeUseOf](http://www.makeuseof.com/tag/how-to-create-windows-compatible-iso-disc-images-in-mac-os-x/).
 

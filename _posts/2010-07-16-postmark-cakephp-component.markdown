@@ -10,7 +10,7 @@ I recently discovered the excellent email delivery service [Postmark](http://pos
 
 There are some existing [PHP libraries for Postmark](http://developer.postmarkapp.com/#php-5) available, but none that integrated elegantly with our [CakePHP](http://cakephp.org/) based application. So I took a few minutes and whipped up a simple Postmark CakePHP component which I've made [available on Github](http://github.com/danielmcormond/postmark-cakephp).
 
-#### Configuration
+### Configuration
 
 Add the following keys to your configuration:
 
@@ -23,7 +23,7 @@ If you want your connection to Postmark to be encrypted, simply change the uri t
 
 Make sure to modified the API key to match the credentials for your Postmark server rack instance.
 
-#### Usage
+### Usage
 
 This component extends the base CakePHP email component, and works virtually the same.
 
@@ -62,7 +62,7 @@ There is one additional attribute which can be used for setting the [Postmark ta
 $this->Postmark->tag = 'contact';
 {% endhighlight %}
 
-#### Debugging
+### Debugging
 
 You can see the response from Postmark in the return value when you send a message:
 
@@ -73,6 +73,6 @@ $this->log($result, 'debug');
 
 If there are any errors, they'll be included in the response. See the [Postmark API documentation for error code detail](http://developer.postmarkapp.com/#api-error-codes).
 
-#### Conclusion
+### Conclusion
 
 Hopefully others will find this useful. If you have any questions, problems, or suggestions, please let me know! Here's a link to the code: [Postmark CakePHP Component on GitHub](http://github.com/danielmcormond/postmark-cakephp).
