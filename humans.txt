@@ -1,0 +1,19 @@
+---
+layout: false
+---
+
+/* TEAM */
+Your title: Daniel McOrmond
+Site: http://danielmcormond.com/
+Twitter: danielmcormond
+Location: Rochester, NY, US
+
+/* THANKS */
+Basic Social Media Icons by: Rogie King (@rogie)
+Site: http://www.finegoodsmarket.com/product/basic-social-media-icons
+
+/* SITE */
+Last update: {{ site.time | date: "%Y/%m/%d" }}
+Standards: HTML5, CSS3
+Components: Jekyll, Typekit
+Software: Git, GitHub, MacVim
