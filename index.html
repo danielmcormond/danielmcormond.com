@@ -3,9 +3,8 @@ layout: default
 title: Daniel McOrmond
 ---
 
-<div class="left">
-	<h1 class="caption">I'm a builder of things.</h1>
-	<p>Current tools in my toolbox:</p>
+<div class="thirds">
+	<h5 class="caption">Some of the tools in my toolbox:</h5>
 	<ul id="tools">
 		<li>HTML and CSS (duh)</li>
 		<li>PHP<a href="#" class="footnote">1</a></li>
@@ -24,8 +23,12 @@ title: Daniel McOrmond
 	</ol>
 </div>
 
-<div class="right">
-	<h5>Popular Posts</h5>
+<div class="thirds standout">
+	<h2 class="caption">I build things</h2>
+</div>
+
+<div class="thirds last">
+	<h5 class="caption">Popular Posts</h5>
 	<ul class="posts">
 	  {% for post in site.posts %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>

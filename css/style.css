@@ -17,7 +17,11 @@ h5 { font-size: 120%; }
 h6 { font-size: 100%; }
 
 ul {
+	margin-left: 16px;
 	list-style-type: square;
+}
+ol {
+	margin-left: 16px;
 }
 li {
 	margin: 5px 0px;
@@ -78,8 +82,37 @@ div.right {
 	float: right;
 }
 
+div.thirds {
+	width: 31%;
+	min-width: 240px;
+	margin-right: 2%;
+	height: 21em;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div.standout {
+	text-align: center;
+	background: #eee;
+}
+h2.caption {
+	margin-top: 1.45em;
+	font-size: 4.25em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(0, 168, 255, 0.5);
+	text-shadow: 3px 3px 0 rgba(255, 0, 180, 0.5);
+}
+h5.caption {
+	margin-bottom: 10px;
+	font-style: italic;
+}
+div.last {
+	margin-right: 0px;
+}
+
 h1#title {
-	font-size: 56px;
+	font-size: 52px;
 	font-family: "anisette-petite-sc",sans-serif;
 	letter-spacing: -3px;
 }
@@ -93,7 +126,7 @@ h1#title a:hover {
 ul#links {
 	list-style-type: none;
 	float: right;
-	margin-top: 15px;
+	margin-top: 7px;
 }
 ul#links li {
 	float: left;
@@ -161,15 +194,7 @@ span.notfound {
 ol#footnotes {
 	margin-top: 20px;
 	list-style-type: decimal;
-}
-
-h1.caption {
-	font-style: italic;
-	margin-top: 0px;
-	margin-bottom: 10px;
-	background: #666;
-	color: #fff;
-	padding: 10px 20px;
+	font-size: 50%;
 }
 
 p {
