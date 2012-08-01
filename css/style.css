@@ -42,8 +42,9 @@ blockquote {
 
 body {
 	font-family: "museo-sans",sans-serif;
-	font-size: 0.8em;
+	font-size: 13px;
 	color: #666;
+	-webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -86,7 +87,6 @@ div.thirds {
 	width: 31%;
 	min-width: 240px;
 	margin-right: 2%;
-	height: 21em;
 	float: left;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -96,8 +96,8 @@ div.standout {
 	background: #eee;
 }
 h2.caption {
-	margin-top: 1.45em;
-	font-size: 4.25em;
+	margin: 25% 5%;
+	font-size: 54px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: rgba(0, 168, 255, 0.5);
@@ -126,8 +126,8 @@ h1#title a:hover {
 ul#links {
 	list-style-type: none;
 	float: right;
-	margin-top: 11px;
-	font-size: 2.5em;
+	margin-top: 16px;
+	font-size: 28px;
 }
 ul#links li {
 	float: left;
@@ -143,12 +143,6 @@ footer {
 	padding-top: 10px;
 	font-size: 75%;
 	color: #999;
-}
-
-div.highlight {
-	background: #333;
-	padding: 10px;
-	width: 58em;
 }
 
 p.update {
@@ -183,7 +177,7 @@ span.notfound {
 }
 
 #disqus_thread {
-	width: 51em;
+	width: 700px;
 	margin-top: 20px;
 }
 
@@ -204,11 +198,17 @@ p {
 }
 code {
 	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 85%;
+	font-size: 11px;
+	line-height: 1.2;
 	background: #eee;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 2px 5px;
+}
+div.highlight {
+	background: #333;
+	padding: 10px;
+	width: 700px;
 }
 div.highlight pre code {
 	background: inherit;
