@@ -141,7 +141,7 @@ footer {
 	clear: both;
 	border-top: 1px solid #eee;
 	padding-top: 10px;
-	font-size: 75%;
+	font-size: 11px;
 	color: #999;
 }
 
@@ -182,14 +182,14 @@ span.notfound {
 }
 
 .footnote {
-	font-size: 50%;
+	font-size: 10px;
 	vertical-align: super;
 	margin-left: 2px;
 }
 ol#footnotes {
 	margin-top: 20px;
 	list-style-type: decimal;
-	font-size: 50%;
+	font-size: 10px;
 }
 
 p {
