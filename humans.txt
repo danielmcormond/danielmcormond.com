@@ -9,8 +9,8 @@ Twitter: danielmcormond
 Location: Rochester, NY, US
 
 /* THANKS */
-Basic Social Media Icons by: Rogie King (@rogie)
-Site: http://www.finegoodsmarket.com/product/basic-social-media-icons
+SS Social Symbolset by: Oak Studios LLC (http://oak.is)
+Site: https://symbolset.com/
 
 /* SITE */
 Last update: {{ site.time | date: "%Y/%m/%d" }}

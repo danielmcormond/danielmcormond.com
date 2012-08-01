@@ -126,7 +126,8 @@ h1#title a:hover {
 ul#links {
 	list-style-type: none;
 	float: right;
-	margin-top: 7px;
+	margin-top: 11px;
+	font-size: 2.5em;
 }
 ul#links li {
 	float: left;
