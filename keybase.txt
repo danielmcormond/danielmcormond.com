@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/danielmcormond
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://danielmcormond
+  * I am danielmcormond (https://keybase.io/danielmcormond) on keybase.
+  * I have a public key with fingerprint 8B2C 42F6 93D7 B87C FFA9  8C1D FBD5 8A45 8E55 918D
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "8b2c42f693d7b87cffa98c1dfbd58a458e55918d",
+            "host": "keybase.io",
+            "key_id": "fbd58a458e55918d",
+            "uid": "eeaab3c057d7d5046775751ca46eb100",
+            "username": "danielmcormond"
+        },
+        "service": {
+            "hostname": "danielmcormond",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1399218144,
+    "expire_in": 157680000,
+    "prev": "dd12ce773f71ebb6ebd06cbfac9846eb03b28d638a0ddb81e60fbf4726d2f76d",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.14
+Comment: https://keybase.io/crypto
+
+yMHkAnicbZFdSBRvFMZ3NbOWfxmEImZa75246Xx+7CaBCYGZFZV9wObyzrzvrOO6
+M9vsrh/YughBNxFlFykWkcomZpKaGPIP1rSggowMUUOsC43IIluEQktnpO6cm+E9
+z+885zmc0W2JFps1T519NL73+f/WV7FfIctJ2f2hHogaqgPOeuDF6z9ZUT1Y9+uK
+GgROIIiUxFAy56ARLwq8JMvQIUgkkkXECpBhBcyyDlJAwA4qtIDZYdiIMIDzFM2o
+GQ+3gozqBnxoXcAYQpGWCJZHPGIJhuN5lmdJCTIcFkmCMMEA1lXowwaNoKrgKp+k
+6T5NRSBsB4ZWrUiGVr8eYGPODvy6FtQkrcrQKoJBv9NsDdb5TbYGi+6/Lm5RUZGx
+v9FQjfWAoqnASRqkFFRMW5J2OChSIBnGDnCtX9GxWzEJlucEwvjMMbjaHI9ISsI8
+T8s8iUXR2AQRnCTKUHII5l4ELVIC4mgBEgiJAok5QhZlhqc4RMk8ZwYO4AuqBpy0
+ERN6DMuA4lFhMKRjEH4ac22yWG2WzUkJ5gUttq07/t01x5W8GhlIfV9ZNLO/efDJ
+lrvtKav9yyXZ9s6yo8urfbc7s87nv9zF5B+IHx8bOBKa9T3InN99rzHV15vbltRB
+3dpp2xcdWPwZigz3dC+ePdUUYe9MJqdXDr3GZYldZyywlm4u9abNfMy7eSNW8O37
+ny/Plt69PRe+djpz2vd1JKt4T9PS446cqYtz4y0jLV0wwWXzTPQUXb4+NsSkTlCf
+4uX/LSxfbctwnbifcqV0GK3wnPvNw7h7uIlpi442lg4ebpiPTae1lxe+iLdeiv5u
+yW5lo8UNicnb8+Gcv+bQ1I+I9/Oxsr6CMOG1Th6U53K9CyX9OLICGnuJwu6x7sn0
+jKo1tKcfCA==
+=FUrJ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/danielmcormond
+
+==================================================================
+
